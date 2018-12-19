@@ -1,0 +1,30 @@
+spring:
+   application:
+      name: xc-zuul
+server:
+   port: 6666
+eureka:
+   instance:
+      instance-id: xc-zuul
+      prefer-ip-address: true
+   client:
+      service-url:
+         defaultZone: http://101.132.139.58:6001/eureka/
+zuul:
+   routes:
+     xc-item-show-consumer: /show/**
+     xc-item-detail-consumer: /detail/**
+     xc-shopping-consumer: /shopping/**
+     xc-order-consumer: /order/**
+     xc-service-consumer: /service/**
+     xc-payment-consumer: /payment/**
+     xc-login-consumer: /login/**
+     xc-address-consumer: /address/**
+     xc-item-repertory-consumer: /repertory/**
+     xc-discounts-consumer: /discounts/**
+     xc-seckill-consumer: /seckill/**
+     xc-customer-consumer: /customer/**
+logging:
+  level: info
+  file: log.txt
+  # strip-prefix: false

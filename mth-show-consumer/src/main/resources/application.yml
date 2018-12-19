@@ -1,11 +1,11 @@
 server:
-  port: 8002
+  port: 8001
 spring:
   application:
-    name: mth-user-consumer
+    name: mth-show-consumer
 eureka:
   instance:
-    instance-id: mth-user-consumer
+    instance-id: mth-show-consumer
     prefer-ip-address: true
   client:
     service-url:
@@ -22,4 +22,4 @@ spring:
        percentage: 1.0
 logging:
     level: info
-    file: log-mth-user-consumer.txt
+    file: log-mth-show-consumer.txt

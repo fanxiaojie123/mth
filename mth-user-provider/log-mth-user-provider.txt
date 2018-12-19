@@ -396,3 +396,5 @@
 2018-12-20 01:45:25.099  INFO [mth-user-provider,,,] 6068 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2018-12-20 01:50:25.099  INFO [mth-user-provider,,,] 6068 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2018-12-20 01:55:25.102  INFO [mth-user-provider,,,] 6068 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-12-20 02:00:25.103  INFO [mth-user-provider,,,] 6068 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-12-20 02:05:25.105  INFO [mth-user-provider,,,] 6068 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

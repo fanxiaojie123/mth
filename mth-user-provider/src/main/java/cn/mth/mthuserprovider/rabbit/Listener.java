@@ -20,7 +20,7 @@ public class Listener {
     @RabbitListener(queues = RabbitConfig.ORDER_QUEUE)
     public void Listeners(String orderid) {
         if (orderid == null || orderid.equals("")) {
-            log.info("订单id错误...");
+           // log.info("订单id错误...");
         }
         System.out.println("order:" + orderid);
     }

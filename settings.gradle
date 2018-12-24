@@ -1,0 +1,4 @@
+rootProject.name = 'mth-project'
+include 'mth-cart-consumer'
+include 'mth-cart-provider'
+

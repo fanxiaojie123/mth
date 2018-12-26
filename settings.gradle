@@ -1,4 +1,4 @@
 rootProject.name = 'mth-project'
-include 'mth-cart-consumer'
-include 'mth-cart-provider'
+inculde 'mth-evalute-consumer'
+include 'mth-evalute-provider'
 

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="cn.mth" externalSystemModuleVersion="0.0.1-SNAPSHOT" linkedProjectId=":mth-cart-provider" linkedProjectPath="$MODULE_DIR$/../../../mth-cart-provider" rootProjectPath="$MODULE_DIR$/../../.." />
+</module>

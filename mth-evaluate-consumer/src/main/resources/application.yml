@@ -1,0 +1,25 @@
+server:
+  port: 8007
+spring:
+  application:
+    name: mth-evaluate-consumer
+eureka:
+  instance:
+    instance-id: mth-evaluate-consumer
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://101.132.139.58:6001/eureka/
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  zipkin:
+    base-url: http://101.132.139.58:7777
+  sleuth:
+    sampler:
+       percentage: 1.0
+logging:
+    level: info
+    file: log-mth-evaluate-consumer.txt

@@ -23,7 +23,7 @@ public class CommonUtil {
         // 4 代表长度为4
         // d 代表参数为正数型
         String orderId=machineId + String.format("%015d", hashCodeV);
-        log.info("生成唯一订单ID：" + orderId);
+        //log.info("生成唯一订单ID：" + orderId);
         return orderId;
     }
 

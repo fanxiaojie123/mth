@@ -1,0 +1,4 @@
+rootProject.name = 'mth-project'
+inculde 'mth-evalute-consumer'
+include 'mth-evalute-provider'
+

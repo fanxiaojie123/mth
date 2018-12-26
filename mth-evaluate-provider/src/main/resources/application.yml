@@ -1,0 +1,47 @@
+server:
+  port: 7007
+spring:
+  application:
+    name: mth-evaluate-provider
+  datasource:
+    url: jdbc:mysql://localhost:8066/TESTDB
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+
+  rabbitmq:
+    host: 47.94.201.44
+    port: 5672
+    username: meetall
+    password:  meetall
+    virtual-host: /meetall
+    publisher-confirms: true
+    publisher-returns: true
+    listener:
+      simple:
+        prefetch: 1
+
+eureka:
+  instance:
+    instance-id: mth-evaluate-provider
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://101.132.139.58:6001/eureka/
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: cn.mth.provider.pojo
+
+---
+spring:
+  zipkin:
+    base-url: http://101.132.139.58:7777
+  sleuth:
+    sampler:
+       percentage: 1.0
+logging:
+    level: info
+    file: log-mth-evaluate-provider.txt

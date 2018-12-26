@@ -1,0 +1,58 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.6.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'cn.mth'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+//mainClassName="cn.mth.consumer.ConsumerApplication"
+
+task copyToLib(type: Copy) {
+    into "$buildDir/libs/lib"
+    from configurations.runtime
+}
+
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+ext['springCloudVersion'] = 'Dalston.SR4'
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    compile('org.springframework.cloud:spring-cloud-starter-feign')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    //熔断监控
+    compile('org.springframework.cloud:spring-cloud-starter-hystrix')
+    compile('org.springframework.cloud:spring-cloud-starter-hystrix-dashboard')
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    //日志监控
+    compile('org.springframework.cloud:spring-cloud-starter-sleuth')
+    compile('org.springframework.cloud:spring-cloud-starter-zipkin')
+    //简化代码
+    compile('org.projectlombok:lombok')
+
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
